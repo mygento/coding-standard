@@ -1,0 +1,23 @@
+{
+    "name": "mygento/coding-standard",
+    "description": "A set of PHP_CodeSniffer rules and sniffs",
+    "homepage": "https://github.com/mygento/coding-standard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mygento",
+            "homepage": "http://www.mygento.net",
+            "email": "connect@mygento.net"
+        }
+    ],
+    "target-dir": "Mygento-Mage1",
+    "require": {
+        "squizlabs/php_codesniffer": "2.*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://mygento.github.io/packages"
+        }
+    ]
+}
