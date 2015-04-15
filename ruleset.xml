@@ -3,6 +3,9 @@
     
     <!-- exclude sub vendor folder -->
     <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/sql/*/mysql4-</exclude-pattern>
+    <exclude-pattern>*/sql/*/install-</exclude-pattern>
+    <exclude-pattern>*/sql/*/upgrade-</exclude-pattern>
     
     <rule ref="PSR2">
         <!-- Magento 1 class names don't comply so ignore these rules  -->
