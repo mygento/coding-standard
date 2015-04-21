@@ -3,9 +3,17 @@
     
     <!-- exclude sub vendor folder -->
     <exclude-pattern>*/vendor/*</exclude-pattern>
+    
+    <!-- exclude sql setup -->
     <exclude-pattern>*/sql/*/mysql4-</exclude-pattern>
     <exclude-pattern>*/sql/*/install-</exclude-pattern>
     <exclude-pattern>*/sql/*/upgrade-</exclude-pattern>
+    
+    <!-- exclude js -->
+    <exclude-pattern>*/js/*</exclude-pattern>
+    
+    <!-- exclude git -->
+    <exclude-pattern>*/.git/*</exclude-pattern>
     
     <rule ref="PSR2">
         <!-- Magento 1 class names don't comply so ignore these rules  -->
