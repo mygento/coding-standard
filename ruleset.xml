@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="Magento">
-    <description>Magento coding standard.</description>
+<ruleset name="Mygento-Mage2">
+    <description>Magento 2 coding standard.</description>
+    <!-- exclude sub vendor folder -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <!-- exclude git -->
+    <exclude-pattern>*/.git/*</exclude-pattern>
+
     <rule ref="Zend.Files.ClosingTag"/>
     <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
     <rule ref="Generic.WhiteSpace.ScopeIndent"/>
-    <rule ref="Generic.Files.LineEndings"/>
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="100"/>
+            <property name="absoluteLineLimit" value="100"/>
+        </properties>
+    </rule>
     <rule ref="PEAR.NamingConventions.ValidClassName"/>
     <rule ref="Squiz.Functions.GlobalFunction"/>
     <rule ref="Zend.NamingConventions.ValidVariableName">
@@ -24,5 +34,4 @@
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
     <rule ref="Squiz.Commenting.DocCommentAlignment"/>
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
-    <rule ref="Magento2"/>
 </ruleset>
