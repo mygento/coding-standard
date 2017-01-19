@@ -51,7 +51,7 @@ class AvoidIdSniff implements PHP_CodeSniffer_Sniff
         if (T_WHITESPACE === $tokens[$stackPtr - 1]['code']
             && in_array($tokens[$stackPtr - 1]['content'], $this->symbolsBeforeId)
         ) {
-            $phpcsFile->addError('Id selector is used', $stackPtr);
+            $phpcsFile->addWarning('Id selector is used', $stackPtr);
         }
     }
 }
