@@ -6,6 +6,7 @@
     <!-- exclude git -->
     <exclude-pattern>*/.git/*</exclude-pattern>
 
+    <rule ref="PSR2" />
     <rule ref="Zend.Files.ClosingTag"/>
     <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
     <rule ref="Generic.WhiteSpace.ScopeIndent"/>
@@ -15,6 +16,7 @@
             <property name="absoluteLineLimit" value="100"/>
         </properties>
     </rule>
+    <rule ref="Generic.Files.LineEndings"/>
     <rule ref="PEAR.NamingConventions.ValidClassName"/>
     <rule ref="Squiz.Functions.GlobalFunction"/>
     <rule ref="Zend.NamingConventions.ValidVariableName">
@@ -34,4 +36,5 @@
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
     <rule ref="Squiz.Commenting.DocCommentAlignment"/>
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="./Magento" />
 </ruleset>
