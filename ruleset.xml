@@ -3,6 +3,10 @@
     <description>Magento 2 coding standard.</description>
     <!-- exclude sub vendor folder -->
     <exclude-pattern>*/vendor/*</exclude-pattern>
+    
+    <!-- exclude node_modules folder -->
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+        
     <!-- exclude git -->
     <exclude-pattern>*/.git/*</exclude-pattern>
 
