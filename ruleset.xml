@@ -18,6 +18,19 @@
     <!-- exclude git -->
     <exclude-pattern>*/.git/*</exclude-pattern>
     
+    <exclude-pattern>*.html</exclude-pattern>
+    <exclude-pattern>*.twig</exclude-pattern>
+    <exclude-pattern>*.yml</exclude-pattern>
+    <exclude-pattern>*.xml</exclude-pattern>
+    <exclude-pattern>*.txt</exclude-pattern>
+    <exclude-pattern>*.less</exclude-pattern>
+    <exclude-pattern>*.css</exclude-pattern>
+    <exclude-pattern>*.js</exclude-pattern>
+    <exclude-pattern>*.jpg</exclude-pattern>
+    <exclude-pattern>*.jpeg</exclude-pattern>
+    <exclude-pattern>*.png</exclude-pattern>
+    <exclude-pattern>*.gif</exclude-pattern>
+    
     <rule ref="PSR2">
         <!-- Magento 1 class names don't comply so ignore these rules  -->
         <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
