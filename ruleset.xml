@@ -4,6 +4,9 @@
     <!-- exclude sub vendor folder -->
     <exclude-pattern>*/vendor/*</exclude-pattern>
     
+    <!-- exclude node_modules folder -->
+    <exclude-pattern>*/node_modules/*</exclude-pattern>  
+    
     <!-- exclude sql setup -->
     <exclude-pattern>*/sql/*/mysql4-</exclude-pattern>
     <exclude-pattern>*/sql/*/install-</exclude-pattern>
