@@ -1,21 +1,25 @@
 {
-    "name": "mygento/coding-standard",
-    "description": "A set of PHP rules and sniffs",
-    "homepage": "https://github.com/mygento/coding-standard",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Mygento",
-            "homepage": "http://www.mygento.net",
-            "email": "connect@mygento.net"
-        }
-    ],
-    "target-dir": "Mygento-Mage2",
-    "require": {
-        "squizlabs/php_codesniffer": "3.*",
-        "friendsofphp/php-cs-fixer": "~2.2.1",
-        "phpmd/phpmd": "2.*",
-        "magento-ecg/coding-standard": "3.*",
-        "jakub-onderka/php-parallel-lint": "^0.9.2"
+  "name": "mygento/coding-standard",
+  "description": "A set of PHP rules and sniffs",
+  "homepage": "https://github.com/mygento/coding-standard",
+  "license": "MIT",
+  "authors": [{
+    "name": "Mygento",
+    "homepage": "http://www.mygento.net",
+    "email": "connect@mygento.net"
+  }],
+  "target-dir": "Mygento-Mage2",
+  "require": {
+    "squizlabs/php_codesniffer": "3.*",
+    "friendsofphp/php-cs-fixer": "~2.2.1",
+    "phpmd/phpmd": "2.*",
+    "magento-ecg/coding-standard": "3.*",
+    "jakub-onderka/php-parallel-lint": "^0.9.2"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Magento\\Sniffs\\": "Magento/Sniffs/",
+      "Magento\\TestFramework\\": "Magento/TestFramework/"
     }
+  }
 }
