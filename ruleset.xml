@@ -39,6 +39,7 @@
     <rule ref="PEAR.ControlStructures.ControlSignature"/>
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
     <rule ref="Squiz.Commenting.DocCommentAlignment"/>
+    <rule ref="Squiz.Commenting.VariableComment" />
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
     <autoload>./Magento/Sniffs/Less/TokenizerSymbolsInterface.php</autoload>
     <rule ref="./Magento" />
