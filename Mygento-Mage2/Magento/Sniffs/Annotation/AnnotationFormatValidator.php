@@ -145,11 +145,11 @@ class AnnotationFormatValidator
             $commentEndPtr,
             $emptyTypeTokens
         );
-        $this->validateMultiLinesInShortDescription(
-            $phpcsFile,
-            $shortPtr,
-            $commentEndPtr
-        );
+        // $this->validateMultiLinesInShortDescription(
+        //     $phpcsFile,
+        //     $shortPtr,
+        //     $commentEndPtr
+        // );
     }
 
     /**

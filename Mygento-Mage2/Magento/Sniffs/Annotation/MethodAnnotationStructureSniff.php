@@ -69,11 +69,11 @@ class MethodAnnotationStructureSniff implements Sniff
             if (empty($tokens[$commentStartPtr]['comment_tags'])) {
                 return;
             }
-            $this->annotationFormatValidator->validateTagsSpacingFormat(
-                $phpcsFile,
-                $commentStartPtr,
-                $emptyTypeTokens
-            );
+            // $this->annotationFormatValidator->validateTagsSpacingFormat(
+            //     $phpcsFile,
+            //     $commentStartPtr,
+            //     $emptyTypeTokens
+            // );
             $this->annotationFormatValidator->validateTagGroupingFormat($phpcsFile, $commentStartPtr);
         }
     }
