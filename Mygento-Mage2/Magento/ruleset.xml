@@ -26,6 +26,10 @@
     <rule ref="Magento.LiteralNamespaces.LiteralNamespaces">
         <exclude-pattern>*/_files/*</exclude-pattern>
     </rule>
+    <rule ref="Magento.Templates.ThisInTemplate">
+        <include-pattern>*.phtml</include-pattern>
+        <severity>8</severity>
+    </rule>
     <rule ref="Magento.Annotation.MethodArguments">
         <exclude-pattern>*/_files/*</exclude-pattern>
         <exclude-pattern>*/Test/*</exclude-pattern>
