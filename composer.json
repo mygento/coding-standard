@@ -30,7 +30,8 @@
   "autoload": {
     "psr-4": {
       "Magento\\Sniffs\\": "Mygento-Mage2/Magento/Sniffs/",
-      "Magento\\TestFramework\\": "Mygento-Mage2/Magento/TestFramework/"
+      "Magento\\TestFramework\\": "Mygento-Mage2/Magento/TestFramework/",
+      "Mygento\\CS\\Config\\": "config"
     }
   }
 }
