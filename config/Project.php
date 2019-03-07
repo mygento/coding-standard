@@ -2,7 +2,7 @@
 
 namespace Mygento\CS\Config;
 
-class Project extends Module
+class Project extends Base
 {
 
 }
