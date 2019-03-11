@@ -41,5 +41,9 @@
     <rule ref="Squiz.Commenting.DocCommentAlignment"/>
     <rule ref="Squiz.Commenting.VariableComment" />
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
+
+    <rule ref="Squiz.Commenting.VariableComment">
+        <exclude name="Squiz.Commenting.VariableComment.IncorrectVarType" />
+    </rule>
     <rule ref="./Magento" />
 </ruleset>
