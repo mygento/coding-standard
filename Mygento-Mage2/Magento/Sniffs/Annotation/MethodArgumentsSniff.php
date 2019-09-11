@@ -213,7 +213,7 @@ class MethodArgumentsSniff implements Sniff
         int $previousCommentOpenPtr,
         int $previousCommentClosePtr,
         int $stackPtr
-    ) : void {
+    ) {
         if ($argumentsCount > 0 && $parametersCount === 0) {
             $inheritdocAnnotationWithoutBracesExists = $this->validateInheritdocAnnotationWithoutBracesExists(
                 $phpcsFile,
@@ -256,7 +256,7 @@ class MethodArgumentsSniff implements Sniff
         int $argumentsCount,
         int $parametersCount,
         int $stackPtr
-    ) : void {
+    ) {
         if ($argumentsCount < $parametersCount && $argumentsCount > 0) {
             $phpcsFile->addError(
                 'Extra @param found in method annotation',
@@ -287,7 +287,7 @@ class MethodArgumentsSniff implements Sniff
         File $phpcsFile,
         array $methodArguments,
         array $paramDefinitions
-    ) : void {
+    ) {
         $parameterNames = $this->getMethodParameters($paramDefinitions);
         if (!in_array($methodArguments[$ptr], $parameterNames)) {
             $error = $methodArguments[$ptr]. ' parameter is missing in method annotation';
@@ -310,7 +310,7 @@ class MethodArgumentsSniff implements Sniff
         array $methodArguments,
         File $phpcsFile,
         array $paramPointers
-    ) : void {
+    ) {
         if (!in_array($paramDefinitionsArguments, $methodArguments)) {
             $phpcsFile->addError(
                 $paramDefinitionsArguments . ' parameter is missing in method arguments signature',
@@ -333,7 +333,7 @@ class MethodArgumentsSniff implements Sniff
         array $methodArguments,
         File $phpcsFile,
         array $paramPointers
-    ) : void {
+    ) {
         $parameterNames = $this->getMethodParameters($paramDefinitions);
         $paramDefinitionsCount = count($paramDefinitions);
         for ($ptr = 0; $ptr < $paramDefinitionsCount; $ptr++) {
@@ -366,7 +366,7 @@ class MethodArgumentsSniff implements Sniff
         array $paramPointers,
         File $phpcsFile,
         array $methodArguments
-    ) : void {
+    ) {
         $argumentsCount = count($methodArguments);
         $parametersCount = count($paramPointers);
         if ($argumentsCount <= $parametersCount && $argumentsCount > 0) {
@@ -408,7 +408,7 @@ class MethodArgumentsSniff implements Sniff
         array $methodArguments,
         array $paramDefinitions,
         array $paramPointers
-    ) : void {
+    ) {
         switch (count($paramDefinitions)) {
             case 0:
                 $phpcsFile->addError(
@@ -480,7 +480,7 @@ class MethodArgumentsSniff implements Sniff
         array $methodArguments,
         int $previousCommentOpenPtr,
         int $previousCommentClosePtr
-    ) : void {
+    ) {
         $argumentCount = count($methodArguments);
         $paramCount = count($paramPointers);
         $this->validateParameterAnnotationForArgumentExists(
