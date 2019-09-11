@@ -9,7 +9,7 @@ class Module extends Base
         $rules = parent::getRules();
         $moduleRules = [
             'phpdoc_var_without_name' => true,
-            'single_line_comment_style' => true,
+            // 'single_line_comment_style' => true,
         ];
         return array_merge($rules, $moduleRules);
     }
