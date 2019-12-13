@@ -25,7 +25,9 @@ module.exports = {
       'unix',
     ],
     'no-multiple-empty-lines': 'error',
+    'no-unneeded-ternary':  'error',
     'no-unused-vars': ['error', { args: 'all', argsIgnorePattern: '^_.+' }],
+    'prefer-const': 'error',
     quotes: [
       'error',
       'single',
