@@ -9,8 +9,8 @@ module.exports = {
     'prototypejs': true
   },
   rules: {
-    'array-bracket-spacing': ['error', 'always', { 'singleValue': false }],
-    indent: ['error', 2],
+    'array-bracket-spacing': ['error', 'never'],
+    indent: ['error', 2, { 'SwitchCase': 1 }],
     'no-trailing-spaces': 'error',
     'object-curly-spacing': ['error', 'always'],
     'keyword-spacing': [
