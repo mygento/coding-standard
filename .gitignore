@@ -1,3 +1,5 @@
 /vendor
+/nbproject
 grumphp.yml
 composer.lock
+.php_cs.cache
