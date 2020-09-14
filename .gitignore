@@ -1,4 +1,6 @@
+nbproject
 composer.*
 vendor
 node_modules
 grumphp.yml
+.php_cs.cache
