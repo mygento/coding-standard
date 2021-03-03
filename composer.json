@@ -3,11 +3,13 @@
   "description": "A set of PHP rules and sniffs",
   "homepage": "https://github.com/mygento/coding-standard",
   "license": "MIT",
-  "authors": [{
-    "name": "Mygento",
-    "homepage": "http://www.mygento.net",
-    "email": "connect@mygento.net"
-  }],
+  "authors": [
+    {
+      "name": "Mygento",
+      "homepage": "http://www.mygento.net",
+      "email": "connect@mygento.net"
+    }
+  ],
   "require": {
     "squizlabs/php_codesniffer": "3.*",
     "friendsofphp/php-cs-fixer": "^2.16.0",
@@ -21,7 +23,8 @@
     "psr-4": {
       "Magento\\Sniffs\\": "Mygento-Mage2/Magento/Sniffs/",
       "Magento\\TestFramework\\": "Mygento-Mage2/Magento/TestFramework/",
-      "Mygento\\CS\\Config\\": "config"
+      "Mygento\\CS\\Config\\": "config",
+      "Mygento\\CS\\Stan\\": "stan"
     }
   }
 }
