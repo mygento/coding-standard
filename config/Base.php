@@ -42,7 +42,7 @@ class Base extends \PhpCsFixer\Config
     public function getRules()
     {
         $rules = [
-            '@PSR2' => true,
+            '@PSR12' => true,
             'array_syntax' => ['syntax' => 'short'],
             'concat_space' => ['spacing' => 'one'],
             'include' => true,
