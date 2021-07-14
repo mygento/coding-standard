@@ -10,12 +10,18 @@ class Base extends \PhpCsFixer\Config
     private $header;
 
     /**
+     * @var array
+     */
+    private $customRules;
+
+    /**
      * @param string $header
      */
-    public function __construct($header = null)
+    public function __construct($header = null, array $customRules = [])
     {
         parent::__construct('Mygento (Module)');
         $this->header = $header;
+        $this->customRules = $customRules;
     }
 
     /**
@@ -24,18 +30,18 @@ class Base extends \PhpCsFixer\Config
     public function setFinder($finder)
     {
         $finder->exclude('dev/tests/functional/generated')
-          ->exclude('dev/tests/functional/var')
-          ->exclude('dev/tests/functional/vendor')
-          ->exclude('dev/tests/integration/tmp')
-          ->exclude('dev/tests/integration/var')
-          ->exclude('lib/internal/Cm')
-          ->exclude('lib/internal/Credis')
-          ->exclude('lib/internal/Less')
-          ->exclude('lib/internal/LinLibertineFont')
-          ->exclude('pub/media')
-          ->exclude('pub/static')
-          ->exclude('setup/vendor')
-          ->exclude('var');
+            ->exclude('dev/tests/functional/var')
+            ->exclude('dev/tests/functional/vendor')
+            ->exclude('dev/tests/integration/tmp')
+            ->exclude('dev/tests/integration/var')
+            ->exclude('lib/internal/Cm')
+            ->exclude('lib/internal/Credis')
+            ->exclude('lib/internal/Less')
+            ->exclude('lib/internal/LinLibertineFont')
+            ->exclude('pub/media')
+            ->exclude('pub/static')
+            ->exclude('setup/vendor')
+            ->exclude('var');
         parent::setFinder($finder);
     }
 
@@ -78,7 +84,7 @@ class Base extends \PhpCsFixer\Config
             'array_indentation' => true,
             'binary_operator_spaces' => true,
             'blank_line_after_opening_tag' => true,
-            'blank_line_before_statement' => [ 'statements' => ["return", "throw", "try" ]],
+            'blank_line_before_statement' => ['statements' => ["return", "throw", "try"]],
             'cast_spaces' => true,
             'class_attributes_separation' => ['elements' => ['method', 'property']],
             'explicit_indirect_variable' => true,
@@ -92,7 +98,7 @@ class Base extends \PhpCsFixer\Config
             'no_blank_lines_after_class_opening' => true,
             'no_blank_lines_after_phpdoc' => true,
             'no_extra_blank_lines' => [
-                'tokens' => [ "break", "continue", "curly_brace_block", "extra", "parenthesis_brace_block", "return", "square_brace_block", "throw", "use" ]
+                'tokens' => ["break", "continue", "curly_brace_block", "extra", "parenthesis_brace_block", "return", "square_brace_block", "throw", "use"]
             ],
             'no_short_bool_cast' => true,
             'no_singleline_whitespace_before_semicolons' => true,
@@ -103,7 +109,7 @@ class Base extends \PhpCsFixer\Config
             'no_whitespace_in_blank_line' => true,
             'object_operator_without_whitespace' => true,
             'ordered_class_elements' => [
-                'order' => [ "use_trait", "constant_public", "constant_protected", "constant_private", "property_public", "property_protected", "property_private", "construct", "destruct", "magic", "phpunit", "method_public", "method_protected", "method_private" ]
+                'order' => ["use_trait", "constant_public", "constant_protected", "constant_private", "property_public", "property_protected", "property_private", "construct", "destruct", "magic", "phpunit", "method_public", "method_protected", "method_private"]
             ],
             'phpdoc_align' => ['align' => 'left'],
             'phpdoc_indent' => true,
@@ -124,10 +130,14 @@ class Base extends \PhpCsFixer\Config
         ];
 
         if (null !== $this->header) {
-          $rules['header_comment'] = [
-              'header' => $this->header,
-              'commentType' => 'PHPDoc',
-          ];
+            $rules['header_comment'] = [
+                'header' => $this->header,
+                'commentType' => 'PHPDoc',
+            ];
+        }
+
+        if (!empty($this->customRules)) {
+            $rules = array_replace($rules, $this->customRules);
         }
 
         return $rules;
