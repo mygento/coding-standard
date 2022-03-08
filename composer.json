@@ -14,7 +14,7 @@
     "squizlabs/php_codesniffer": "3.*",
     "friendsofphp/php-cs-fixer": "~3.4.0",
     "phpmd/phpmd": "^2.9.1",
-    "magento/magento-coding-standard": "19",
+    "magento/magento-coding-standard": "v2.4-magento-compatibitity-dev",
     "php-parallel-lint/php-parallel-lint": "^1.0.0",
     "phpro/grumphp": "~1.5.0",
     "phpstan/phpstan": "~1.2.0"
@@ -25,6 +25,12 @@
       "Magento\\TestFramework\\": "Mygento-Mage2/Magento/TestFramework/",
       "Mygento\\CS\\Config\\": "config",
       "Mygento\\CS\\Stan\\": "stan"
+    }
+  },
+  "repositories": {
+    "magento-coding-standard": {
+      "type": "git",
+      "url": "https://github.com/Daseraf/magento-coding-standard.git"
     }
   }
 }
