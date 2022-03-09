@@ -16,7 +16,7 @@
     "phpmd/phpmd": "^2.8.1",
     "magento/magento-coding-standard": "5",
     "php-parallel-lint/php-parallel-lint": "^1.0.0",
-    "phpro/grumphp": "~1.3.0",
+    "phpro/grumphp": "~1.5.0",
     "phpstan/phpstan": ">=0.12.3 <=0.12.23"
   },
   "autoload": {
