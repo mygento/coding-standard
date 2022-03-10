@@ -87,7 +87,7 @@ class Base extends \PhpCsFixer\Config
         'blank_line_after_opening_tag' => true,
         'blank_line_before_statement' => ['statements' => ["return", "throw", "try"]],
         'cast_spaces' => true,
-        'class_attributes_separation' => ['elements' => ['const' => 'none', 'method' => 'one', 'property' => 'one', 'trait_import' => 'none']],
+        'class_attributes_separation' => ['elements' => ['method' => 'one', 'property' => 'one', 'trait_import' => 'none']],
         'explicit_indirect_variable' => true,
         'explicit_string_variable' => true,
         'function_typehint_space' => true,
