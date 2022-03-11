@@ -1,0 +1,4 @@
+services:
+  - class: Mygento\CS\Stan\DataObject
+    tags:
+      - phpstan.broker.methodsClassReflectionExtension
