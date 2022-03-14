@@ -16,7 +16,9 @@
     "phpmd/phpmd": "^2.9.1",
     "php-parallel-lint/php-parallel-lint": "^1.0.0",
     "phpro/grumphp": "~1.5.1",
-    "phpstan/phpstan": "~1.2.0"
+    "phpstan/phpstan": "~1.2.0",
+    "webonyx/graphql-php": "v0.13.9 as 14.9",
+    "magento/magento-coding-standard": "19"
   },
   "autoload": {
     "psr-4": {
