@@ -1,3 +1,6 @@
+parameters:
+	bootstrapFiles:
+		- autoload.php
 services:
   - class: Mygento\CS\Stan\DataObject
     tags:

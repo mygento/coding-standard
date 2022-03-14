@@ -79,7 +79,6 @@ class Base extends \PhpCsFixer\Config
             'no_empty_phpdoc' => true,
             'return_type_declaration' => true,
             'no_useless_return' => true,
-            // mygento 2
             'align_multiline_comment' => true,
             'array_indentation' => true,
             'binary_operator_spaces' => true,
@@ -120,9 +119,7 @@ class Base extends \PhpCsFixer\Config
             'phpdoc_types_order' => [
                 'null_adjustment' => 'always_last'
             ],
-            //'phpdoc_var_without_name' => false,
             'return_assignment' => true,
-            //'single_line_comment_style' => false,
             'trailing_comma_in_multiline_array' => true,
             'trim_array_spaces' => true,
             'unary_operator_spaces' => true,
