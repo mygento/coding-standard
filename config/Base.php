@@ -2,8 +2,6 @@
 
 namespace Mygento\CS\Config;
 
-use PhpCsFixer\ConfigInterface;
-
 class Base extends \PhpCsFixer\Config
 {
     /**
@@ -29,7 +27,7 @@ class Base extends \PhpCsFixer\Config
     /**
      * {@inheritdoc}
      */
-    public function setFinder(iterable $finder): ConfigInterface
+    public function setFinder($finder)
     {
         $finder->exclude('dev/tests/functional/generated')
             ->exclude('dev/tests/functional/var')
@@ -44,14 +42,10 @@ class Base extends \PhpCsFixer\Config
             ->exclude('pub/static')
             ->exclude('setup/vendor')
             ->exclude('var');
-
-        return parent::setFinder($finder);
+        parent::setFinder($finder);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getRules(): array
+    public function getRules()
     {
         $rules = [
             '@PSR12' => true,
@@ -60,10 +54,11 @@ class Base extends \PhpCsFixer\Config
             'include' => true,
             'new_with_braces' => true,
             'no_empty_statement' => true,
+            'no_extra_consecutive_blank_lines' => true,
             'no_leading_import_slash' => true,
             'no_leading_namespace_whitespace' => true,
             'no_multiline_whitespace_around_double_arrow' => true,
-            'multiline_whitespace_before_semicolons' => true,
+            'no_multiline_whitespace_before_semicolons' => true,
             'no_singleline_whitespace_before_semicolons' => true,
             'no_trailing_comma_in_singleline_array' => true,
             'no_unused_imports' => true,
@@ -77,7 +72,9 @@ class Base extends \PhpCsFixer\Config
             'phpdoc_types' => true,
             'phpdoc_add_missing_param_annotation' => true,
             'single_quote' => true,
+            'standardize_not_equals' => true,
             'ternary_to_null_coalescing' => true,
+            'lowercase_cast' => true,
             'no_empty_comment' => true,
             'no_empty_phpdoc' => true,
             'return_type_declaration' => true,
@@ -88,7 +85,7 @@ class Base extends \PhpCsFixer\Config
             'blank_line_after_opening_tag' => true,
             'blank_line_before_statement' => ['statements' => ["return", "throw", "try"]],
             'cast_spaces' => true,
-            'class_attributes_separation' => ['elements' => ['method' => 'one', 'property' => 'one', 'trait_import' => 'none']],
+            'class_attributes_separation' => ['elements' => ['method', 'property']],
             'explicit_indirect_variable' => true,
             'explicit_string_variable' => true,
             'function_typehint_space' => true,
@@ -103,10 +100,13 @@ class Base extends \PhpCsFixer\Config
                 'tokens' => ["break", "continue", "curly_brace_block", "extra", "parenthesis_brace_block", "return", "square_brace_block", "throw", "use"]
             ],
             'no_short_bool_cast' => true,
+            'no_singleline_whitespace_before_semicolons' => true,
             'no_spaces_around_offset' => true,
             'no_superfluous_elseif' => true,
             'no_trailing_comma_in_list_call' => true,
             'no_useless_else' => true,
+            'no_whitespace_in_blank_line' => true,
+            'object_operator_without_whitespace' => true,
             'ordered_class_elements' => [
                 'order' => ["use_trait", "constant_public", "constant_protected", "constant_private", "property_public", "property_protected", "property_private", "construct", "destruct", "magic", "phpunit", "method_public", "method_protected", "method_private"]
             ],
@@ -120,7 +120,7 @@ class Base extends \PhpCsFixer\Config
                 'null_adjustment' => 'always_last'
             ],
             'return_assignment' => true,
-            'trailing_comma_in_multiline' => true,
+            'trailing_comma_in_multiline_array' => true,
             'trim_array_spaces' => true,
             'unary_operator_spaces' => true,
             'whitespace_after_comma_in_array' => true,
