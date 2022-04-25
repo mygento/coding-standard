@@ -4,7 +4,7 @@ namespace Mygento\CS\Config;
 
 class Symfony extends Base
 {
-    public function getRules()
+    public function getRules(): array
     {
         $rules = parent::getRules();
         $symfonyRules = [

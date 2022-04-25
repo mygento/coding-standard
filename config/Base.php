@@ -2,7 +2,10 @@
 
 namespace Mygento\CS\Config;
 
-class Base extends \PhpCsFixer\Config
+use PhpCsFixer\Config;
+use PhpCsFixer\ConfigInterface;
+
+class Base extends Config
 {
     /**
      * @var string
@@ -16,6 +19,7 @@ class Base extends \PhpCsFixer\Config
 
     /**
      * @param string $header
+     * @param array $customRules
      */
     public function __construct($header = null, array $customRules = [])
     {
@@ -27,7 +31,7 @@ class Base extends \PhpCsFixer\Config
     /**
      * {@inheritdoc}
      */
-    public function setFinder($finder)
+    public function setFinder($finder): ConfigInterface
     {
         $finder->exclude('dev/tests/functional/generated')
             ->exclude('dev/tests/functional/var')
@@ -42,10 +46,11 @@ class Base extends \PhpCsFixer\Config
             ->exclude('pub/static')
             ->exclude('setup/vendor')
             ->exclude('var');
-        parent::setFinder($finder);
+
+        return parent::setFinder($finder);
     }
 
-    public function getRules()
+    public function getRules(): array
     {
         $rules = [
             '@PSR12' => true,
@@ -82,9 +87,9 @@ class Base extends \PhpCsFixer\Config
             'array_indentation' => true,
             'binary_operator_spaces' => true,
             'blank_line_after_opening_tag' => true,
-            'blank_line_before_statement' => ['statements' => ["return", "throw", "try"]],
+            'blank_line_before_statement' => ['statements' => ['return', 'throw', 'try']],
             'cast_spaces' => true,
-            'class_attributes_separation' => ['elements' => ['const' => 'none','method' => 'one','property' => 'none','trait_import' => 'none']],
+            'class_attributes_separation' => ['elements' => ['const' => 'none', 'method' => 'one', 'property' => 'none', 'trait_import' => 'none']],
             'explicit_indirect_variable' => true,
             'explicit_string_variable' => true,
             'function_typehint_space' => true,
@@ -96,7 +101,7 @@ class Base extends \PhpCsFixer\Config
             'no_blank_lines_after_class_opening' => true,
             'no_blank_lines_after_phpdoc' => true,
             'no_extra_blank_lines' => [
-                'tokens' => ["break", "continue", "curly_brace_block", "extra", "parenthesis_brace_block", "return", "square_brace_block", "throw", "use"]
+                'tokens' => ['break', 'continue', 'curly_brace_block', 'extra', 'parenthesis_brace_block', 'return', 'square_brace_block', 'throw', 'use'],
             ],
             'no_short_bool_cast' => true,
             'no_singleline_whitespace_before_semicolons' => true,
@@ -107,7 +112,7 @@ class Base extends \PhpCsFixer\Config
             'no_whitespace_in_blank_line' => true,
             'object_operator_without_whitespace' => true,
             'ordered_class_elements' => [
-                'order' => ["use_trait", "constant_public", "constant_protected", "constant_private", "property_public", "property_protected", "property_private", "construct", "destruct", "magic", "phpunit", "method_public", "method_protected", "method_private"]
+                'order' => ['use_trait', 'constant_public', 'constant_protected', 'constant_private', 'property_public', 'property_protected', 'property_private', 'construct', 'destruct', 'magic', 'phpunit', 'method_public', 'method_protected', 'method_private'],
             ],
             'phpdoc_align' => ['align' => 'left'],
             'phpdoc_indent' => true,
@@ -116,7 +121,7 @@ class Base extends \PhpCsFixer\Config
             'phpdoc_single_line_var_spacing' => true,
             'phpdoc_trim' => true,
             'phpdoc_types_order' => [
-                'null_adjustment' => 'always_last'
+                'null_adjustment' => 'always_last',
             ],
             //'phpdoc_var_without_name' => false,
             'return_assignment' => true,
@@ -130,7 +135,7 @@ class Base extends \PhpCsFixer\Config
         if (null !== $this->header) {
             $rules['header_comment'] = [
                 'header' => $this->header,
-                'commentType' => 'PHPDoc',
+                'comment_type' => 'PHPDoc',
             ];
         }
 
