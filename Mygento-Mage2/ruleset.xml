@@ -8,6 +8,14 @@
     <!-- exclude git -->
     <exclude-pattern>*/.git/*</exclude-pattern>
 
-    <rule ref="PSR2" />
+    <rule ref="PSR12" />
+
+    <rule ref="./../../../phpcompatibility/php-compatibility/PHPCompatibility">
+      <exclude name="PHPCompatibility.FunctionUse.RequiredToOptionalFunctionParameters"/>
+      <exclude name="PHPCompatibility.ParameterValues.RemovedPCREModifiers"/>
+      <exclude name="PHPCompatibility.InitialValue.NewConstantScalarExpressions"/>
+      <exclude name="PHPCompatibility.Lists.NewKeyedList" />
+    </rule>
+
     <rule ref="./../../../magento/magento-coding-standard/Magento2" />
 </ruleset>
