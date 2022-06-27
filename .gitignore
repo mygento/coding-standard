@@ -1,2 +1,8 @@
 node_modules
 *.tgz
+vendor
+nbproject
+.php_cs.cache
+composer.*
+grumphp.yml
+yarn.lock

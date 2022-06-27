@@ -1,0 +1,106 @@
+.test1 {
+  color: #000!important; //declaration-bang-space-before declaration-no-important
+}
+
+.test2 {
+  color: black; //color-named
+}
+
+.test3 {
+  margin: 10px;
+  text-transform: uppercase;
+  margin: 0; // declaration-block-no-duplicate-properties
+}
+
+.test4 {
+  margin: 0;
+  .test5 { //rule-empty-line-before
+    margin: 0;
+  }
+}
+.test6 { //rule-empty-line-before
+  margin: 0;
+}
+
+.test7 { &::before { content: "\e030"; } }
+
+.test8 { //block-no-empty
+
+}
+
+.test9 {
+  background: #ff22EE; //color-hex-length color-hex-case
+}
+
+.test10 {
+  background: #ff; //color-no-invalid-hex
+}
+
+.test11 {
+  color: #f00 !important; //declaration-no-important
+}
+
+
+.test12 {
+    color: #f00; //indentation max-empty-lines
+}
+
+.test13 {
+  margin: 0.5em;
+  padding: .5em; //number-leading-zero
+}
+
+.test13 {
+  margin: 0;
+}
+
+.test13 {
+  margin: 0; //no-duplicate-selectors
+}
+
+.test14 {
+  .two {
+    .three {
+      .four {
+        margin: 0; //max-nesting-depth
+      }
+    }
+  }
+}
+
+@media print {
+  .test15 {
+    .two {
+      .three {
+        &:hover {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.test16 {
+  margin: 0; padding: 0; //declaration-block-semicolon-newline-after
+}
+
+.test17{ //block-opening-brace-space-before
+  color: rgba(0,0,0,0.1); //function-comma-space-after
+}
+
+.test18 {
+  color: rgba( 0, 0, 0, .1 ); //function-parentheses-space-inside
+}
+
+.test19 {
+  content: "hello";
+}
+
+.test20 {
+  color: #fff ; //declaration-block-semicolon-space-before
+  margin: 0 //declaration-block-trailing-semicolon
+}
+
+.test21 {
+  margin: 0px; //length-zero-no-unit
+}
