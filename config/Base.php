@@ -136,6 +136,7 @@ class Base extends Config
             $rules['header_comment'] = [
                 'header' => $this->header,
                 'comment_type' => 'PHPDoc',
+                'location' => 'after_open',
             ];
         }
 
