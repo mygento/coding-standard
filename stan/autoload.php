@@ -8,7 +8,7 @@ use Magento\Framework\Filesystem\Driver\File;
 use Magento\Framework\TestFramework\Unit\Autoloader\ExtensionAttributesGenerator;
 use Magento\Framework\TestFramework\Unit\Autoloader\ExtensionAttributesInterfaceGenerator;
 use Magento\Framework\TestFramework\Unit\Autoloader\FactoryGenerator;
-use Magento\Framework\TestFramework\Unit\Autoloader\GeneratedClassesAutoloader;
+use Mygento\CS\Stan\GeneratedClassesAutoloader;
 
 if (!defined('TESTS_TEMP_DIR')) {
     //phpcs:ignore Magento2.Functions.DiscouragedFunction
