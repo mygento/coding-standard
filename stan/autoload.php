@@ -12,7 +12,7 @@ use Mygento\CS\Stan\GeneratedClassesAutoloader;
 
 if (!defined('TESTS_TEMP_DIR')) {
     //phpcs:ignore Magento2.Functions.DiscouragedFunction
-    define('TESTS_TEMP_DIR', dirname(__DIR__) . '/../../generate');
+    define('TESTS_TEMP_DIR', dirname(__DIR__) . '/../../..');
 }
 
 $generatorIo = new Io(
