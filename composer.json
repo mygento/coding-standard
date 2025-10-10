@@ -19,12 +19,28 @@
     "phpstan/phpstan": "^1.9",
     "magento/magento-coding-standard": "31"
   },
+  "require-dev": {
+    "magento/framework": "103.0.*"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repo.magento.com"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "Magento\\Sniffs\\": "Mygento-Mage2/Magento/Sniffs/",
       "Magento\\TestFramework\\": "Mygento-Mage2/Magento/TestFramework/",
       "Mygento\\CS\\Config\\": "config",
       "Mygento\\CS\\Stan\\": "stan"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "phpro/grumphp": true,
+      "symfony/flex": false,
+      "magento/composer-dependency-version-audit-plugin": false
     }
   }
 }

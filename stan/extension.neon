@@ -1,7 +1,19 @@
 parameters:
-	bootstrapFiles:
-		- autoload.php
+  mygento:
+    magentoRoot: %currentWorkingDirectory%
+  bootstrapFiles:
+    - autoload.php
+parametersSchema:
+  mygento: structure([
+    magentoRoot: string()
+  ])
 services:
   - class: Mygento\CS\Stan\DataObject
     tags:
       - phpstan.broker.methodsClassReflectionExtension
+  generatedAutoloader:
+    class: Mygento\CS\Stan\Autoload\Generated
+    arguments:
+      magentoRoot: %mygento.magentoRoot%
+    tags:
+      - phpstan.mygento.autoloader
