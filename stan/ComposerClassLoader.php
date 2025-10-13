@@ -43,10 +43,4 @@ class ComposerClassLoader
     {
         return false !== $this->composer->findFile($classyConstructName);
     }
-
-    public function findFile(string $class): ?string
-    {
-        $find = $this->composer->findFile($class);
-        return false === $find ? null : $find;
-    }
 }
