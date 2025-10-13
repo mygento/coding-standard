@@ -4,4 +4,5 @@
 grumphp.yml
 composer.lock
 .php_cs.cache
+.php-cs-fixer.cache
 node_modules

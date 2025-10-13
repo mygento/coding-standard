@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
@@ -40,7 +41,7 @@ class AllPurposeActionTest extends TestCase
     {
         return [
             [
-                new class implements ActionInterface, HttpGetActionInterface {
+                new class () implements ActionInterface, HttpGetActionInterface {
                     /**
                      * @inheritDoc
                      */
@@ -52,7 +53,7 @@ class AllPurposeActionTest extends TestCase
                 false
             ],
             [
-                new class implements ActionInterface {
+                new class () implements ActionInterface {
                     /**
                      * @inheritDoc
                      */
@@ -64,7 +65,7 @@ class AllPurposeActionTest extends TestCase
                 true
             ],
             [
-                new class implements HttpGetActionInterface {
+                new class () implements HttpGetActionInterface {
                     /**
                      * @inheritDoc
                      */
@@ -76,8 +77,7 @@ class AllPurposeActionTest extends TestCase
                 false
             ],
             [
-                new class {
-
+                new class () {
                 },
                 false
             ]

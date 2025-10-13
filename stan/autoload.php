@@ -1,31 +1,13 @@
 <?php
 
-// phpcs:disable
+use PHPStan\DependencyInjection\Container;
+use Mygento\CS\Stan\AutoloaderInterface;
 
-use Magento\Framework\App\Filesystem\DirectoryList;
-use Magento\Framework\Code\Generator\Io;
-use Magento\Framework\Filesystem\Driver\File;
-use Magento\Framework\TestFramework\Unit\Autoloader\ExtensionAttributesGenerator;
-use Magento\Framework\TestFramework\Unit\Autoloader\ExtensionAttributesInterfaceGenerator;
-use Magento\Framework\TestFramework\Unit\Autoloader\FactoryGenerator;
-use Magento\Framework\TestFramework\Unit\Autoloader\GeneratedClassesAutoloader;
-
-if (!defined('TESTS_TEMP_DIR')) {
-    //phpcs:ignore Magento2.Functions.DiscouragedFunction
-    define('TESTS_TEMP_DIR', dirname(__DIR__) . '/../../..');
+if (!isset($container) || !$container instanceof Container) {
+    throw new \RuntimeException('You can not use autoload without phpstan extension');
 }
 
-$generatorIo = new Io(
-    new File(),
-    TESTS_TEMP_DIR . '/' .
-    DirectoryList::getDefaultConfig()[DirectoryList::GENERATED_CODE][DirectoryList::PATH]
-);
-$generatedCodeAutoloader = new GeneratedClassesAutoloader(
-    [
-        new ExtensionAttributesGenerator(),
-        new ExtensionAttributesInterfaceGenerator(),
-        new FactoryGenerator(),
-    ],
-    $generatorIo
-);
-spl_autoload_register([$generatedCodeAutoloader, 'load']);
+foreach ($container->getServicesByTag('phpstan.mygento.autoloader') as $loader) {
+    /** @var AutoloaderInterface $loader */
+    $loader->register();
+}
