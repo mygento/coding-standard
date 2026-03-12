@@ -1,6 +1,7 @@
 {
   "name": "mygento/coding-standard",
   "description": "A set of PHP rules and sniffs",
+  "type": "phpcodesniffer-standard",
   "homepage": "https://github.com/mygento/coding-standard",
   "license": "MIT",
   "authors": [
