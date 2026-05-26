@@ -70,7 +70,6 @@ class Base extends Config
             'phpdoc_types' => true,
             'phpdoc_add_missing_param_annotation' => true,
             'single_quote' => true,
-            'standardize_not_equals' => true,
             'ternary_to_null_coalescing' => true,
             'no_empty_comment' => true,
             'no_empty_phpdoc' => true,
@@ -90,13 +89,11 @@ class Base extends Config
                 'tokens' => ['break', 'continue', 'curly_brace_block', 'extra', 'parenthesis_brace_block', 'return', 'square_brace_block', 'throw', 'use'],
             ],
             'no_short_bool_cast' => true,
-            'no_singleline_whitespace_before_semicolons' => true,
             'no_spaces_around_offset' => true,
             'no_superfluous_elseif' => true,
             'no_trailing_comma_in_singleline' => true,
             'no_useless_else' => true,
             'no_whitespace_in_blank_line' => true,
-            'object_operator_without_whitespace' => true,
             'ordered_class_elements' => [
                 'order' => ['use_trait', 'constant_public', 'constant_protected', 'constant_private', 'property_public', 'property_protected', 'property_private', 'construct', 'destruct', 'magic', 'phpunit', 'method_public', 'method_protected', 'method_private'],
             ],
@@ -112,7 +109,7 @@ class Base extends Config
             'return_assignment' => true,
             'trim_array_spaces' => true,
             'whitespace_after_comma_in_array' => true,
-            'type_declaration_spaces' => true,
+            'nullable_type_declaration_for_default_null_value' => true,
         ];
 
         if (null !== $this->header) {
