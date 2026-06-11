@@ -11,6 +11,9 @@ services:
   - class: Mygento\CS\Stan\DataObject
     tags:
       - phpstan.broker.methodsClassReflectionExtension
+  - class: Mygento\CS\Stan\Store
+    tags:
+      - phpstan.broker.methodsClassReflectionExtension
   generatedAutoloader:
     class: Mygento\CS\Stan\Autoload\Generated
     arguments:
