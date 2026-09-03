@@ -8,7 +8,6 @@ use Magento\Framework\Filesystem\Driver\File;
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\TestFramework\Unit\Autoloader\ExtensionAttributesGenerator;
 use Magento\Framework\TestFramework\Unit\Autoloader\ExtensionAttributesInterfaceGenerator;
-use Magento\Framework\TestFramework\Unit\Autoloader\FactoryGenerator;
 use Mygento\CS\Stan\ComposerClassLoader;
 
 class Generated extends AbstractLoader
