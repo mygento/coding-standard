@@ -16,8 +16,8 @@
     "phpmd/phpmd": "^2.12.0",
     "php-parallel-lint/php-parallel-lint": "^1.0.0",
     "phpro/grumphp": "^2.10.0",
-    "phpstan/phpstan": "^1.9",
-    "magento/magento-coding-standard": "31"
+    "phpstan/phpstan": "^2.0",
+    "magento/magento-coding-standard": "41"
   },
   "require-dev": {
     "magento/framework": "103.0.*"
